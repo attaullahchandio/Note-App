@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === "development") {
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
+}else {
+  // Export app for production/serverless deployment (e.g. Vercel)
+  export default app;
 }
-
-// Export app for production/serverless deployment (e.g. Vercel)
-export default app;
