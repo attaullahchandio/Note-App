@@ -33,14 +33,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Notes API is running 🚀" });
 });
 
-// Start server only in development mode
-if (process.env.NODE_ENV === "development") {
   const PORT = process.env.PORT || 5000;
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
-}else {
-  // Export app for production/serverless deployment (e.g. Vercel)
-  export default app;
-}
